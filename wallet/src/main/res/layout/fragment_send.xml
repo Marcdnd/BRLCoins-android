@@ -1,0 +1,157 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.WalletSendCoins">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/pay_to_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/pay_to_label"
+                    android:textColor="@color/gray_54_sec_text_icons" />
+
+                <!-- TODO make android:imeOptions="actionNext" work -->
+                <AutoCompleteTextView
+                    android:id="@+id/send_to_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/NormalText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/pay_to_label"
+                    android:layout_toLeftOf="@id/scan_qr_code"
+                    android:layout_toStartOf="@id/scan_qr_code"
+                    android:imeOptions="actionNext|flagNoExtractUi"
+                    android:completionThreshold="1"
+                    android:hint="@string/send_coins_fragment_receiving_address_tip"
+                    android:singleLine="true"
+                    android:inputType="textMultiLine|textNoSuggestions" />
+
+                <!--<AutoCompleteTextView-->
+                    <!--android:id="@+id/send_coins_receiving_address"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/list_entry_padding_horizontal"-->
+                    <!--android:layout_marginRight="@dimen/list_entry_padding_horizontal"-->
+                    <!--android:completionThreshold="1"-->
+                    <!--android:hint="@string/send_coins_fragment_receiving_address_hint"-->
+                    <!--android:imeOptions="flagNoExtractUi"-->
+                    <!--android:singleLine="true"-->
+                    <!--android:textColor="#000"-->
+                    <!--android:textSize="@dimen/font_size_normal" />-->
+
+                <TextView
+                    android:id="@+id/address_error_message"
+                    style="@style/ErrorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/send_to_address"
+                    android:text="@string/address_error" />
+
+                <ImageButton
+                    android:id="@+id/scan_qr_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/send_to_address"
+                    android:contentDescription="@string/scan_qr_code"
+                    android:src="@drawable/qr_code" />
+
+                <TextView
+                    android:id="@+id/amount_to_send_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/send_to_address"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:text="@string/amount_to_send_label"
+                    android:textColor="@color/gray_54_sec_text_icons" />
+
+                <LinearLayout
+                    android:id="@+id/amounts"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:layout_below="@+id/amount_to_send_label">
+
+                    <com.coinomi.wallet.ui.widget.AmountEditView
+                        android:id="@+id/send_coin_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                    <com.coinomi.wallet.ui.widget.AmountEditView
+                        android:id="@+id/send_local_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/amount_error_message"
+                    style="@style/ErrorText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/amounts"
+                    tools:text="@string/amount_error" />
+
+                <TextView
+                    android:id="@+id/amount_warning_message"
+                    style="@style/WarningText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/amount_error_message"
+                    tools:text="@string/amount_warn_fees_apply" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom">
+                <Button
+                    android:id="@+id/send_confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:enabled="false"
+                    android:text="@string/button_send" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
