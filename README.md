@@ -7,7 +7,8 @@ CONGRATULATIONS: THANKS COINOMI TEAM FOR YOUR DEVELOPEMENT
 
 COINOMI: Our goal is to support every cryptocurrency with an active development team. Store all the best cryptocurrency through a single app, without sacrificing security. Private keys are stored on your own device. Instead of having one backup file for every coin, you get a master key that can be memorized or stored on a piece of paper. Restore all wallets from a single recovery phrase.
 
-BRLCoins: Our goal is to support altcoins used in Brazil and Portugal: First support to [Cryptoescudo (CESC)](http://cryptoescudo.org)
+BRLCoins: Our goal is to support altcoins used in Brazil and Portugal: 
+* First support to [Cryptoescudo (CESC)](http://cryptoescudo.org)
 
 TODOs:
 
