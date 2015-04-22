@@ -189,7 +189,7 @@ public class Constants {
     );
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
-//            BitcoinMain.get(),
+            BitcoinMain.get(),
 //            DogecoinMain.get(),
 //            LitecoinMain.get(),
 //            NuBitsMain.get(),
