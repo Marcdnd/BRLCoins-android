@@ -1,5 +1,7 @@
-BRLCoins Android is a Coinomi Wallet clone to altcoins
-======================================================
+BRLCoins Android 
+================
+
+BRLCoins is [Coinomi Multicoins Wallet](https://github.com/Coinomi/coinomi-android) fork/clone
 
 CONGRATULATIONS: THANKS COINOMI TEAM FOR YOUR DEVELOPEMENT
 
