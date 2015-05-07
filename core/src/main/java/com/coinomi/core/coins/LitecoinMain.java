@@ -22,7 +22,7 @@ public class LitecoinMain extends CoinType {
         unitExponent = 8;
         feePerKb = value(100000);
         minNonDust = value(1000); // 0.00001 LTC mininput
-        softDustLimit = value(100000); // 0.001 LTC
+        softDustLimit = value(1000); // 0.00001 LTC
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 

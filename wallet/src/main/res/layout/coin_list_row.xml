@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        coinomi:single_line="true" />
+        coinomi:single_line="true"
+        android:longClickable="false" />
 
 </LinearLayout>

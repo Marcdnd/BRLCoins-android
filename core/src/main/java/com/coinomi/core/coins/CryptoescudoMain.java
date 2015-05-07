@@ -22,7 +22,7 @@ public class CryptoescudoMain extends CoinType {
         unitExponent = 8;
         feePerKb = value(100000);
         minNonDust = value(1000); // 0.00001 CESC mininput
-        softDustLimit = value(100000); // 0.001 CESC
+        softDustLimit = value(0); // 0 CESC
         softDustPolicy = SoftDustPolicy.BASE_FEE_FOR_EACH_SOFT_DUST_TXO;
     }
 
