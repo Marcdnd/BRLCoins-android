@@ -127,7 +127,10 @@ public class Constants {
                                                     new ServerAddress("dgc-cce-2.coinomi.net", 5020)),
             new CoinAddress(CannacoinMain.get(),    new ServerAddress("ccn-cce-1.coinomi.net", 5021),
                                                     new ServerAddress("ccn-cce-2.coinomi.net", 5021)),
-            new CoinAddress(CryptoescudoMain.get(),     new ServerAddress("pool.denesfer.srv.br", 50001)),
+            new CoinAddress(CryptoescudoMain.get(), new ServerAddress("pool.denesfer.srv.br", 50001),
+                                                    new ServerAddress("electrum1.cryptoescudo.org", 50001),
+                                                    new ServerAddress("electrum2.cryptoescudo.org", 50001),
+                                                    new ServerAddress("electrum3.cryptoescudo.org", 50001)),
             new CoinAddress(DigibyteMain.get(),     new ServerAddress("digibytewiki.com", 50001))       // https://github.com/digibyte/electrum-dgb-server
     );
 
@@ -192,7 +195,7 @@ public class Constants {
             BitcoinMain.get(),
 //            DogecoinMain.get(),
 //            LitecoinMain.get(),
-//            NuBitsMain.get(),
+            NuBitsMain.get(),
 //            PeercoinMain.get(),
 //            NuSharesMain.get(),
 //            DashMain.get(),
@@ -207,6 +210,5 @@ public class Constants {
 //            LitecoinTest.get(),
 //            DogecoinTest.get()
             CryptoescudoMain.get()
-
     );
 }
